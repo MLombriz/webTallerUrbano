@@ -1,0 +1,514 @@
+
+/* LIMPIANDO ESTILOS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/* IMPORT SCSS */
+@import "./utilities/variables";
+@import "./layout/header";
+@import "./layout/footer";
+@import "./utilities/animaciones";
+@import "./views/contacto";
+@import "./views/historia";
+@import "./views/metodologia";
+@import "./views/portfolio";
+
+/* ETIQUETAS GENERICAS */
+body{
+    font-family: $font-principal;
+    
+}
+h1{
+    font-family: 'Prosto One', cursive;
+    font-size: 35pt;
+    text-align: left;
+    font-weight: 300;
+    color: $color-principal;
+    margin-left: 25px;
+}
+h2{
+    color: $color-principal;
+    font-style: italic;
+    font-weight: lighter;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    letter-spacing: 1px;
+}
+
+h3{
+    padding: 30px 0;
+}
+section{
+    padding: 50px 0;
+    
+}
+a{
+    color: black; 
+    text-decoration: none;
+}
+a:hover{
+    
+    font-weight: 700;
+}
+p{
+    text-align: justify;
+    line-height: 25px;
+}
+
+/*-------------------------------------------------------------------------------------*/
+                    /* -- INDEX -- */
+/*-------------------------------------------------------------------------------------*/
+
+.divTextoIntro{
+    @extend p;
+    background-color: #e99a4ab7;
+    color: $color-texto-contraste;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    font-size: 1.5rem;
+}
+
+.div__content-center{
+    max-width: 900px;
+    margin: 0 auto 70px auto;
+    text-align: center;
+}
+.tituloImg{   
+    background-image: url(../media/fotos/mueble-2.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    min-height: 200px;   
+    
+}
+.tituloImg:hover .divTextoIntro{
+    transition: 1s ease;
+    opacity: 1;
+}
+
+.p--aboutUs{
+    @extend p;
+    margin: 50px 0;
+    line-height: 30px;
+    font-size: 14pt;
+}
+.aDivLink{
+    margin: 5px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    .aDivLink__aboutUs:hover, .aDivLink__catPop:hover, .aDivLink__descuentos:hover{
+        color:$color-principal;
+        text-decoration: none;
+        font-weight: 700;
+        box-shadow: 2px 2px #d5d6d2;
+    }
+}
+.aDivLink--bouncer{
+    animation-name: bouncer;
+    animation-delay: 1s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.aDivLink__aboutUs, .aDivLink__catPop, .aDivLink__descuentos{
+    align-self: center;
+    color:$color-principal;
+    padding: 5px 50px;
+    margin: 5px;   
+    border: 1px solid $color-principal;
+    border-radius: 5px;
+}
+.aDivLink__ofertas{
+    background-color: $color-principal;
+    color: $color-texto-contraste;
+    padding: 5px 50px;
+    margin: 5px; 
+    border: 1px solid $color-texto-contraste;
+    border-radius: 5px;
+}
+.aDivLink__ofertas:hover{
+    font-weight: 700;
+    box-shadow: 2px 2px #d5d6d2;
+    color: $color-texto-contraste;
+}
+.div--ventajas{ padding: 15px; }
+.img--ventajas{
+    height: 100px;
+    width: 100px;
+}
+.div--bgVentajaColor{
+    background-color: $color-principal;
+    color: $color-texto-contraste;
+}
+.p--tituloVentajas{
+    padding-top: 10px;
+    font-size: 14pt;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+}
+.p--ventajas{ 
+    display: none;
+    padding-top: 10px; 
+}
+.div--ventajas:hover{ 
+    .p--ventajas{
+        display: block;
+        text-align: center;
+        font-size: 14pt;
+        line-height: 30px;
+    }
+    img{ display: none;}
+    .p--tituloVentajas{ display: none;}
+}
+
+.div__portfolio-container{
+    position: relative;
+    overflow: hidden;
+    margin: 10px 0;
+    border-radius: 2px;
+
+    img{
+        -moz-transition: all 0.8s;
+        -webkit-transition: all 0.8s;
+        transition: all 0.8s;
+    }
+
+    a:hover img{
+        -moz-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+    a:hover p{
+        font-weight: 700;
+        color: $color-principal;
+    }
+}
+.div__portfolio-details{
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    z-index: 200;
+}
+.p--catPop{
+    @extend p;
+    text-align: center;
+    color: white;
+    font-size: 25pt;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.h3--tituloDescuento{
+    text-transform: uppercase;
+}
+.p--ofertas{font-size: small;}
+.img--descuentos{
+    width: 100%;
+    height: auto;
+    margin: 10px;
+}
+
+.carousel{
+    min-height: 240px;
+    padding: 40px;
+    border-radius: 2px;
+    text-align: center;
+    p{
+        font-size: 20px;
+        font-weight: 400;
+        color: black
+    }
+}
+.div--rating i {
+    color: #ffb944;
+    font-size: 26px;
+}
+.carousel-indicators li{
+    background-color: $color-principal;
+    width: 15px;
+    height: 5px;
+    border-radius: 5px;
+    margin: 0 8px;
+}
+.carousel-container{
+    max-width: 900px;
+    margin: 0 auto;
+}
+.carousel-control-next, .carousel-control-prev{
+    color: transparent;
+    opacity: 1;
+    width: 5%;
+}
+.control-button i{
+    background-color: transparent;
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid $color-principal;
+    border-radius: 50%;
+    font-size: 20px;
+    color: $color-principal;
+}
+.testimonial-user{
+    max-width: 240px;
+    margin: 0 auto;
+    text-align: left;
+
+    h6{
+        margin-bottom: 0px;
+    }
+    span{
+        font-size: 12px;
+    }
+    img{
+        border-radius: 50%;
+        max-width: 50px;
+        text-align: center;
+    }
+}
+
+.div--bannerTestimonials{
+    height: 100%;
+    width: 100%;
+    background-image: url(../media/fotos/mueble-2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.divLinkOpiniones{
+    z-index: 5;
+    height: 100%;
+    width: 200px;
+    margin-left: 5vw;
+    font-size: x-small;
+    color: white;
+    background-color: #e99a4ae0;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 25% 25%;
+    grid-template-areas: 
+    "pBannerLink"
+    "aGaleriaOpiniones"
+    "divBannerInsta";
+    justify-content: center;
+    align-items: center;
+}
+.divLinkGaleriaOpiniones{
+    grid-area: aGaleriaOpiniones;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.divBannerInsta{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    grid-area: divBannerInsta;
+}
+.pBannerLink{
+    @extend p;
+    color: white;
+    grid-area: pBannerLink;
+}
+.aGaleriaOpiniones{
+    padding: 5px 25px;
+    color: white;
+    border: 1px solid white;
+}
+a.aGaleriaOpiniones:hover{
+    font-weight: 700;
+    box-shadow: 2px 2px #d5d6d2;
+}
+.sizeLogoRedes2{
+    width: 35px;
+    height: 35px;
+}
+
+
+
+
+
+/* HISTORIA */
+
+#section-introNos{
+    background-image: url("../media/fotos/madera-1.jpg");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    .p--historia{
+        text-align: center;
+        padding-top: 20px;
+        line-height: 30px;
+    }
+    .h2--historia{
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        .span--historia{
+            font-weight: 500;
+            font-size: 2em;
+            text-transform: uppercase;
+        }
+    }
+}
+
+    .h2__span{
+        padding-left: 25px;
+        font-size: 1.5em;
+    }
+    .p__orgullo{
+        padding: 15px 0;
+        line-height: 30px;
+        
+    }
+    .p__orgullo--resaltado{
+        @extend .p__orgullo;
+        font-size: 25px;
+        text-align: center;
+    }
+
+#section-equipo{
+    min-height: 60vh;
+}
+.div__equipo{
+    padding: 15px 0;
+}
+    .div__teamUser-container{
+        position: relative;
+        overflow: hidden;
+        border-radius: 2%;   
+    }
+    .div__teamUser-details{
+        text-align: left;
+        background-color: white;
+
+        
+    }
+    .p__teamUser{
+        margin: 0;
+        font-size: 15pt;
+        padding: 5px;
+        
+    }
+    .p__teamUser--puesto{
+        font-size: 12pt;
+        font-style: italic;
+        padding: 0;
+    }
+
+
+#section-trabajo{
+    background: #FDC830;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-box-shadow: 0px 0px 12px 1px rgba(129, 129, 129, 0.75);
+    -moz-box-shadow: 0px 0px 12px 1px rgba(129, 129, 129, 0.75);
+    box-shadow: 0px 0px 12px 1px rgba(129, 129, 129, 0.75);
+
+    color: white;
+    h5{
+        text-transform: uppercase;
+        text-decoration: underline;
+        color: black;
+        font-weight: 500;
+        padding: 20px 0;
+    }
+
+    a{
+        color: white;
+    }
+    a:hover{
+        color: black;
+        font-weight: 500;
+    }
+    .div__trabajo{
+        padding-left: 30px;
+        text-align: center;
+    }
+}
+
+.h3__equipo{
+    color: white;
+    font-size: 35pt;
+    font-style: italic;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 576px) { 
+    section{
+        padding: 60px 0;
+    }
+    .p--aboutUs{
+        font-size: 11pt;
+    }
+    .pVentajas{
+        display: block;
+        text-align: center;
+        font-size: 14pt;
+        line-height: 30px;
+    }
+    div.divVentajas:hover img,  div.divVentajas:hover p.pVentajasTitulo{
+        display: unset;
+    }
+}
+
+@media (max-width: 768px) {  }
+
+
+@media (max-width: 992px) { 
+    .enlaces{
+        position: fixed;
+        text-align: center;
+        justify-self: center;
+        align-self: center;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        transition: all 1s ease;
+        background: #FDC830;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to top, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to top, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+
+    .animacion__menu1{
+        clip-path: circle(0% at 100% 0);
+    }
+    .animacion__menu2{
+        clip-path: circle(150% at 100% 0);
+    }
+}
+
+
+@media (max-width: 1200px) { }
+
+
+
+
+

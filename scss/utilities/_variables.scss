@@ -1,0 +1,13 @@
+/* DEFINICION DE VARIABLES */
+
+$color-principal: #e9994a;
+$color-texto-contraste: white;
+$font-principal: 'Montserrat Alternates', sans-serif;
+$font-contacto: 'Public Sans', sans-serif;
+
+
+
+@mixin size($x1,$x2){
+    height: $x1;
+    width: $x2;
+}

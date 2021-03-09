@@ -1,0 +1,107 @@
+/* -- FOOTER -- */
+
+@import "../utilities/variables";
+
+.indexFooter{
+    width: 100vw;
+    height: 50vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    padding-top: 15px;
+    margin-top: 20px;
+}
+.footer__sizeLogoRedes{
+    height: 50px;
+    width: 50px;
+}
+
+.footer__divContacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.footer__logoFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+
+.footer__logoContacto{
+    align-self: center;
+    height: 50px;
+    width: 50px;
+    opacity: 1;
+}
+.footer__divContacto:hover{ 
+    .footer__logoContacto{
+        transform: scale(1.2);
+    }
+    .footer__aContacto{
+        font-weight: bolder;
+        color: $color-principal;
+    }
+}
+
+.footer__pContacto{
+    text-transform: uppercase;
+    font-weight: 700;
+    align-self: center;
+}
+
+.footer__aContacto{
+    align-self: center;
+    text-align: center;
+    color: black;
+}
+
+.footer__info2{
+    background-color: #d5d6d2;
+    margin: 25px 0;
+}
+.footer__info2__pTitulo{
+    padding-bottom: 5px;
+    padding-right: 20px;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.footer__contactoLink{
+    color: black;
+    animation-name: bouncer;
+    animation-delay: 1s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    margin: 20px;
+    a{
+        border: 1px solid #00262a;
+        padding: 10px;
+        background-color: #00262a;
+        color: white;
+    }
+    a:hover{
+        font-weight: 700;
+        border: 1px solid #00262a;
+        border-top: 2px solid #00262a;
+        border-left: 2px solid #00262a;
+        background-color: $color-principal;
+    }
+}
+
+.footer__info2__lista{
+    line-height: 25px;
+    a{
+        color: #00262a;
+    }
+}
+
