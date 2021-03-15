@@ -477,9 +477,14 @@ a.aGaleriaOpiniones:hover{
     div.divVentajas:hover img,  div.divVentajas:hover p.pVentajasTitulo{
         display: unset;
     }
+    .span--historia{
+        font-size: 40px;
+        border: 5px solid black;
+    }
 }
 
-@media (max-width: 768px) {  }
+@media (max-width: 768px) { 
+ }
 
 
 @media (max-width: 992px) { 
@@ -506,6 +511,7 @@ a.aGaleriaOpiniones:hover{
     .animacion__menu2{
         clip-path: circle(150% at 100% 0);
     }
+    
 }
 
 
