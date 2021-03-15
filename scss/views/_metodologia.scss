@@ -1,45 +1,31 @@
 /* -- METODOLOGIA DE TRABAJO -- */
 
-.metodTrabajoBody{
+.metodTrabajoBg{
     background-image: url("../media/fotos/tallerSoldador.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed ;
 }
-.metodTrabajoMain{
-    height: 100%;
-}
-.metodTrabajoH1{
-    margin: 30px 30px;
-    text-align: end;
-}
-.metodTrabajoSeparacion{
-    width: 100%;
-    height: 100px;
-}
-.metodTrabajoTextColor{
-    color: wheat;
-}
-
-.divMetodLeft{
-    margin-right: 100px;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: hsla(155, 43%, 18%, 0.950);
-    height: 100%;
-}
-.divMetodRight{
-    margin-left: 100px;
-    padding-right: 10px;
-    background-color: hsla(155, 43%, 18%, 0.950);
-    height: 100%;
+.div__metod{
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.671);
     
 }
+
 .olMetod{
     margin: 0 50px;
 }
 .h2Metod{
     text-transform: uppercase;
     text-decoration: none;
+    margin: 10px 0 25px 0;
+    padding-left: 15px;
 }
