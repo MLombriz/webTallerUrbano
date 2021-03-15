@@ -27,7 +27,7 @@ window.addEventListener('resize',function(){
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 110 || document.documentElement.scrollTop > 110) {
+  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
     aboutUs.className = ('aboutUs animate__animated animate__fadeInUpBig');
     document.getElementById("aboutUs").style.opacity = "1";
     
@@ -37,7 +37,7 @@ function scrollFunction() {
     
   }
 
-  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+  if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
     ventajas.className = ('ventajas animate__animated animate__slideInRight')
     document.getElementById("ventajas").style.opacity = "1";
     
@@ -47,7 +47,7 @@ function scrollFunction() {
     
   }
 
-  if (document.body.scrollTop > 1200 || document.documentElement.scrollTop > 1200) {
+  if (document.body.scrollTop > 1400 || document.documentElement.scrollTop > 1400) {
     catPop.className = ('catPop animate__animated animate__fadeInBottomLeft');
     document.getElementById("catPop").style.opacity = "1";
     

@@ -90,19 +90,21 @@ p{
     text-align: center;
 }
 .tituloImg{   
-    background-image: url(../media/fotos/mueble-2.jpg);
+    background-image: url(../media/fotos/sillas-intro.jpg);
     background-size: cover;
     background-position: center;
     width: 100%;
     height: auto;
-    min-height: 200px;   
+    min-height: 400px;   
     
 }
 .tituloImg:hover .divTextoIntro{
     transition: 1s ease;
     opacity: 1;
 }
-
+#aboutUs{
+    opacity: 0;
+}
 .p--aboutUs{
     @extend p;
     margin: 50px 0;
