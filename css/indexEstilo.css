@@ -721,7 +721,7 @@ a.aGaleriaOpiniones:hover {
   text-transform: uppercase; }
 
 /* MEDIA QUERY */
-@media (max-width: 576px) {
+@media only screen and (max-width: 576px) {
   section {
     padding: 60px 0; }
   .p--aboutUs {
@@ -732,7 +732,11 @@ a.aGaleriaOpiniones:hover {
     font-size: 14pt;
     line-height: 30px; }
   div.divVentajas:hover img, div.divVentajas:hover p.pVentajasTitulo, div.divVentajas:hover .pVentajasTitulo.p--inputCheckbox, div.divVentajas:hover .pVentajasTitulo.divTextoIntro, div.divVentajas:hover .pVentajasTitulo.p--aboutUs, div.divVentajas:hover .pVentajasTitulo.p--catPop, div.divVentajas:hover .pVentajasTitulo.pBannerLink {
-    display: unset; } }
+    display: unset; }
+  #section-introNos .h2--historia .span--historia {
+    font-size: 40px; }
+  h1 {
+    font-size: 25pt; } }
 
 @media (max-width: 992px) {
   .enlaces {

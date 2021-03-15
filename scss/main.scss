@@ -461,7 +461,7 @@ a.aGaleriaOpiniones:hover{
 
 /* MEDIA QUERY */
 
-@media (max-width: 576px) { 
+@media only screen and (max-width: 576px) { 
     section{
         padding: 60px 0;
     }
@@ -477,10 +477,18 @@ a.aGaleriaOpiniones:hover{
     div.divVentajas:hover img,  div.divVentajas:hover p.pVentajasTitulo{
         display: unset;
     }
-    .span--historia{
-        font-size: 40px;
-        border: 5px solid black;
+    #section-introNos{
+        .h2--historia{
+            .span--historia{
+                font-size: 40px;   
+            }
+        }
     }
+
+    h1{
+        font-size: 25pt;
+    }
+    
 }
 
 @media (max-width: 768px) { 
