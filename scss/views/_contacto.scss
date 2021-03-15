@@ -26,9 +26,10 @@ div{
 input{
     font-family: $font-contacto;
     color: $color-principal;
+    border: none;
 }
 
-.input__name, .input__email, .input__text, .input__enviar, textarea{
+.input__name, .input__email, .input__text{
     outline: 0;
     padding: 1em;
     border-radius: 8px; 
@@ -36,6 +37,29 @@ input{
     width: 100%;
     background: transparent;
     border-bottom: 1px solid $color-principal;
+}
+textarea{
+    outline: 0;
+    padding: 1em;
+    border-radius: 8px; 
+    margin: 10px;
+    width: 100%;
+    background: transparent;
+    border: 1px solid $color-principal;
+}
+.input__enviar{
+    outline: 0;
+    padding: 1em;
+    border-radius: 8px; 
+    margin: 10px;
+    width: 100%;
+    background: rgba(0, 128, 0, 0.651);
+    border: 1px solid white;
+    color: white;
+    &:hover{
+        box-shadow: 2px 2px #d5d6d2;
+        background-color: rgba(0, 78, 0, 0.801);
+    }
 }
 .textarea--dimensiones{
     height: 100%;

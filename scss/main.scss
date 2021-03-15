@@ -49,11 +49,12 @@ section{
 a{
     color: black; 
     text-decoration: none;
+    &:hover{
+        text-decoration: none;
+        font-weight: 700;
+    }
 }
-a:hover{
-    
-    font-weight: 700;
-}
+
 p{
     text-align: justify;
     line-height: 25px;

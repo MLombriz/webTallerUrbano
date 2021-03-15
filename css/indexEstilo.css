@@ -163,7 +163,8 @@ header .header__sizeLogo {
   padding-right: 20px;
   border-bottom: 1px solid black;
   margin-bottom: 10px;
-  font-weight: 700; }
+  font-weight: 700;
+  text-align: center; }
 
 .footer__contactoLink {
   color: black;
@@ -229,9 +230,10 @@ div .div--contacto {
 
 input {
   font-family: "Public Sans", sans-serif;
-  color: #e9994a; }
+  color: #e9994a;
+  border: none; }
 
-.input__name, .input__email, .input__text, .input__enviar, textarea {
+.input__name, .input__email, .input__text {
   outline: 0;
   padding: 1em;
   border-radius: 8px;
@@ -239,6 +241,28 @@ input {
   width: 100%;
   background: transparent;
   border-bottom: 1px solid #e9994a; }
+
+textarea {
+  outline: 0;
+  padding: 1em;
+  border-radius: 8px;
+  margin: 10px;
+  width: 100%;
+  background: transparent;
+  border: 1px solid #e9994a; }
+
+.input__enviar {
+  outline: 0;
+  padding: 1em;
+  border-radius: 8px;
+  margin: 10px;
+  width: 100%;
+  background: rgba(0, 128, 0, 0.651);
+  border: 1px solid white;
+  color: white; }
+  .input__enviar:hover {
+    box-shadow: 2px 2px #d5d6d2;
+    background-color: rgba(0, 78, 0, 0.801); }
 
 .textarea--dimensiones {
   height: 100%;
@@ -350,9 +374,9 @@ section {
 a {
   color: black;
   text-decoration: none; }
-
-a:hover {
-  font-weight: 700; }
+  a:hover {
+    text-decoration: none;
+    font-weight: 700; }
 
 p, .p--inputCheckbox, .divTextoIntro, .p--aboutUs, .p--catPop, .pBannerLink {
   text-align: justify;
